@@ -22,7 +22,7 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 
 ## Architecture Diagram
 	![Architecture Diagram]
-	(https://github.com/SairamPimple Hospital_Management_System_SQL_Project/blob/main/ER%20Diagram.png)
+	(https://github.com/SairamPimple/Physician-Notetaker/blob/main/images/A_flowchart-style_diagram_titled_%22Physician_Noteta.png)
 
 ---
 
