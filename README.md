@@ -6,8 +6,8 @@
 1. **`medical_summary`** – key clinical facts (symptoms, diagnosis, treatment, prognosis, status)  
 2. **`sentiment_intent`** – patient’s dominant sentiment and primary conversational intent  
 3. **`soap_note`** – a synthesized SOAP (Subjective, Objective, Assessment, Plan) note
-
 The design favors transparency and deterministic behavior: most logic is rule/regex driven, with only a small pretrained sentiment model for fallback classification.
+
 ---
 
 ## Table of Content
