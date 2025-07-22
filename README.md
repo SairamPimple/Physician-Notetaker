@@ -69,15 +69,17 @@ physician-notetaker/
 	cd Physician\ Notetaker
 	conda create -n physician-notetaker python=3.10 -y # create env
 	conda activate physician-notetaker # activate env
-    
+	```    
 
 2. Install dependencies
-	'''python
+   	```python
 	pip install -r requirements.txt
 	python -m spacy download en_core_web_sm
+	```
 
-3. Run the demo script
-	'''python
+4. Run the demo script
+   	```python
 	python demo.py
+    	```
 
 ---
