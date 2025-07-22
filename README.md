@@ -14,7 +14,9 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 1. [Project Overview](#project-overview)
 2. [Architecture Diagram](#architecture-diagram)
 3. [Features](#features)
-4. [Tools & Technologies]
+4. [Tools & Technologies](#tools--technologies)
+5. [File Structure](#file-structure)
+6. [Setup & Usage](#setup--usage)
 
 ---
 
@@ -25,44 +27,49 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 ---
 
 ## Features
-	•	Transcript Parsing: Robust speaker-aware parsing that merges continuation lines.
-	•	Custom NER: spaCy EntityRuler patterns for SYMPTOM, TREATMENT, DIAGNOSIS, PROGNOSIS.
-	•	Medical Summary Generation: Entity merging, normalization, prognosis window extraction, current status inference.
-	•	Sentiment & Intent Detection: Lexicon-first heuristics with fallback to HuggingFace distilbert-base-uncased-finetuned-sst-2-english.
-	•	SOAP Note Builder: Automatic S/O/A/P sections generated from parsed lines and the summary JSON.
-	•	Single-call Pipeline: process_transcript(raw_text) returns all three JSON objects.
-	•	Slim & Explainable: Minimal dependencies, rule-driven logic for easy auditing.
+- Transcript Parsing: Robust speaker-aware parsing that merges continuation lines.
+- Custom NER: spaCy EntityRuler patterns for SYMPTOM, TREATMENT, DIAGNOSIS, PROGNOSIS.
+- Medical Summary Generation: Entity merging, normalization, prognosis window extraction, current status inference.
+- Sentiment & Intent Detection: Lexicon-first heuristics with fallback to HuggingFace distilbert-base-uncased-finetuned-sst-2-english.
+- SOAP Note Builder: Automatic S/O/A/P sections generated from parsed lines and the summary JSON.
+- Single-call Pipeline: process_transcript(raw_text) returns all three JSON objects.
+- Slim & Explainable: Minimal dependencies, rule-driven logic for easy auditing.
 
 ---
 
 ## Tools & Technologies
-	•	Language: Python 3.8+
-	•	NLP Libraries:
-	•	spaCy (en_core_web_sm model + EntityRuler)
-	•	HuggingFace Transformers sentiment pipeline
-	•	Regex & Rule Systems: Python re, custom lexicons & normalization maps
-	•	Utilities: pprint for demo output
+- Language: Python 3.8+
+- NLP Libraries:
+	- spaCy (en_core_web_sm model + EntityRuler)
+	- HuggingFace Transformers sentiment pipeline
+	- Regex & Rule Systems: Python re, custom lexicons & normalization maps
+- Utilities: pprint for demo output
 
 ---
 
 ## File Structure
-├── Hospital_DB_Tables.sql            
-├── Hospital_DB_Data.sql       
-├── triggers_and_views.sql     
-└── Questions.sql            
+physician-notetaker/
+├── README.md
+├── requirements.txt
+├── demo.py
+└── physician_notetaker
+    ├── config.py
+    ├── preprocessing.py
+    ├── ner.py
+    ├── sentiment_intent.py
+    ├── summarizer.py
+    ├── soap.py
+    └── pipeline.py
 
 ---
 
 ## Setup & Usage
-
 1. Clone & create environment
-git clone <repo-url>
-cd Physician\ Notetaker
-python -m venv .venv
-# Linux / macOS
-source .venv/bin/activate
-# Windows
-# .venv\Scripts\activate
+	git clone <repo-url>
+	cd Physician\ Notetaker
+	conda create -n physician-notetaker python=3.10 -y # create env
+	conda activate physician-notetaker # activate env
+    
 
 2. Install dependencies
 pip install -r requirements.txt
@@ -70,19 +77,5 @@ python -m spacy download en_core_web_sm
 
 3. Run the demo script
 python demo.py
-
----
-
-Contributing
-	1.	Fork & Branch
-	•	Fork the repo, create a feature branch: feat/<short-description>
-	2.	Code Style
-	•	Follow PEP 8, type-hint functions, keep functions small & testable.
-	3.	Tests
-	•	Add/extend unit tests for new rules, regexes, or model behavior.
-	4.	Patterns & Lexicons
-	•	Update config.py for new entities/lexicons; keep names consistent and normalized.
-	5.	PR Review
-	•	Open a PR with a clear description, sample transcript, and before/after JSON diffs.
 
 ---
