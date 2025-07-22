@@ -17,6 +17,7 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 4. [Tools & Technologies](#tools--technologies)
 5. [File Structure](#file-structure)
 6. [Setup & Usage](#setup--usage)
+7. [Sample Output](#sample-output)
 
 ---
 
@@ -82,3 +83,9 @@ physician-notetaker/
 	python demo.py
 
 ---
+
+## Sample Output
+![Sample Output](https://github.com/SairamPimple/Physician-Notetaker/blob/main/images/output.png)
+
+---
+
