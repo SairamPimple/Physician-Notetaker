@@ -65,7 +65,7 @@ physician-notetaker/
 ## Setup & Usage
 1. Clone & create environment
  	```python
-	git clone <repo-url>
+	git clone https://github.com/SairamPimple/Physician-Notetaker.git
 	cd Physician\ Notetaker
 	conda create -n physician-notetaker python=3.10 -y # create env
 	conda activate physician-notetaker # activate env
@@ -80,6 +80,5 @@ physician-notetaker/
 4. Run the demo script
    	```python
 	python demo.py
-    	```
 
 ---
