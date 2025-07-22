@@ -21,7 +21,7 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 ---
 
 ## Architecture Diagram
-
+	![Architecture Diagram]
 	(https://github.com/SairamPimple Hospital_Management_System_SQL_Project/blob/main/ER%20Diagram.png)
 
 ---
@@ -48,23 +48,24 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 ---
 
 ## File Structure
-physician-notetaker/
+physician-notetaker/  
 ├── README.md   
 ├── requirements.txt  
 ├── demo.py  
 └── physician_notetaker  
-    ├── config.py  
-    ├── preprocessing.py  
-    ├── ner.py  
-    ├── sentiment_intent.py  
-    ├── summarizer.py  
-    ├── soap.py  
-    └── pipeline.py  
+    - ├── config.py  
+    - ├── preprocessing.py  
+    - ├── ner.py  
+    - ├── sentiment_intent.py  
+    - ├── summarizer.py  
+    - ├── soap.py  
+    - └── pipeline.py  
 
 ---
 
 ## Setup & Usage
 1. Clone & create environment
+	'''python
 	git clone <repo-url>
 	cd Physician\ Notetaker
 	conda create -n physician-notetaker python=3.10 -y # create env
@@ -72,10 +73,12 @@ physician-notetaker/
     
 
 2. Install dependencies
-pip install -r requirements.txt
-python -m spacy download en_core_web_sm
+	'''python
+	pip install -r requirements.txt
+	python -m spacy download en_core_web_sm
 
 3. Run the demo script
-python demo.py
+	'''python
+	python demo.py
 
 ---
