@@ -64,14 +64,14 @@ physician-notetaker/
 
 ## Setup & Usage
 1. Clone & create environment
-	'''python
+ 	```python
 	git clone <repo-url>
 	cd Physician\ Notetaker
 	conda create -n physician-notetaker python=3.10 -y # create env
 	conda activate physician-notetaker # activate env
 	```    
 
-2. Install dependencies
+3. Install dependencies
    	```python
 	pip install -r requirements.txt
 	python -m spacy download en_core_web_sm
