@@ -49,17 +49,17 @@ The design favors transparency and deterministic behavior: most logic is rule/re
 
 ## File Structure
 physician-notetaker/
-├── README.md
-├── requirements.txt
-├── demo.py
-└── physician_notetaker
-    ├── config.py
-    ├── preprocessing.py
-    ├── ner.py
-    ├── sentiment_intent.py
-    ├── summarizer.py
-    ├── soap.py
-    └── pipeline.py
+├── README.md   
+├── requirements.txt  
+├── demo.py  
+└── physician_notetaker  
+    ├── config.py  
+    ├── preprocessing.py  
+    ├── ner.py  
+    ├── sentiment_intent.py  
+    ├── summarizer.py  
+    ├── soap.py  
+    └── pipeline.py  
 
 ---
 
